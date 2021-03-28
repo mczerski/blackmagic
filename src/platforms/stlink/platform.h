@@ -58,7 +58,7 @@ int usbuart_debug_write(const char *buf, size_t len);
 
 #define SRST_PORT	GPIOB
 #define SRST_PIN_V1	GPIO1
-#define SRST_PIN_V2	GPIO0
+#define SRST_PIN_V2	GPIO6
 
 #define LED_PORT	GPIOA
 /* Use PC14 for a "dummy" uart led. So we can observere at least with scope*/
@@ -119,8 +119,8 @@ int usbuart_debug_write(const char *buf, size_t len);
 #define SWO_UART				USART1
 #define SWO_UART_DR				USART1_DR
 #define SWO_UART_CLK			RCC_USART1
-#define SWO_UART_PORT			GPIOA
-#define SWO_UART_RX_PIN			GPIO10
+#define SWO_UART_PORT			GPIOB
+#define SWO_UART_RX_PIN			GPIO7
 
 /* This DMA channel is set by the USART in use */
 #define SWO_DMA_BUS				DMA1

@@ -133,6 +133,7 @@ void traceswo_init(uint32_t baudrate, uint32_t swo_chan_bitmask)
 	rcc_periph_clock_enable(SWO_UART_CLK);
 	rcc_periph_clock_enable(SWO_DMA_CLK);
 
+	AFIO_MAPR |= AFIO_MAPR_USART1_REMAP;
 	gpio_set_mode(SWO_UART_PORT, GPIO_MODE_INPUT,
 				  GPIO_CNF_INPUT_PULL_UPDOWN, SWO_UART_RX_PIN);
 	/* Pull SWO pin high to keep open SWO line ind uart idle state!*/
